@@ -24,9 +24,20 @@ function App() {
       <div style={{background: 'black', color: 'red'}}>
         <h4>{logo}</h4>
       </div>
+
+      <button onClick={() => {
+        let copy = [...글제목];
+        copy = copy.sort();
+        set글제목(copy);
+      }}>가나다순정렬</button>
+
       <div className='list'>
         <h4>{글제목[0]} <span onClick={() => setThumb(thumb + 1)}>👍</span> {thumb} </h4>
-        <button onClick={() => set글제목('여자 코트 추천')}></button>
+        <button onClick={() => {
+          let copy = [...글제목];
+          copy[0] = '여자 코트 추천';
+          set글제목(copy);
+        }}>버튼</button>
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
