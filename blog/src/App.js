@@ -48,7 +48,24 @@ function App() {
         <h4>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
       </div>
+        <Modal></Modal>
+        <Modal/>
+      
     </div>
+  );
+}
+
+// 하나의 덩어리를 함수화해서 사용가능(컴포넌트화)
+function Modal() {
+  return (
+    // 리액트 상에서는 <> 문법 사용가능(의미 없는 공간을 의미함)
+    <>
+      <div className='modal'>
+        <h4>제목</h4>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+    </>
   );
 }
 
